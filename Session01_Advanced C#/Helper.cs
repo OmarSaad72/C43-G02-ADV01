@@ -8,6 +8,7 @@ namespace Session01_Advanced_C_
 {
     internal class Helper<T>
     {
+        #region Swap
         public static void Swap<T>(ref T x, ref T y)
         {
             T Temp = x;
@@ -31,6 +32,24 @@ namespace Session01_Advanced_C_
         //    Point Temp = x;
         //    x = y;
         //    y = Temp;
-        //}
+        //} 
+        #endregion
+
+        #region SearchArray
+        public static int SearchArray<T>(T[] Arr, T value)
+        {
+            if (Arr is not null)
+            {
+                for (int i = 0; i < Arr.Length; i++)
+                {
+                    if (Arr[i].Equals(value))
+                    {
+                        return i;
+                    }
+                }
+            }
+            return -1;
+        }
+        #endregion
     }
 }

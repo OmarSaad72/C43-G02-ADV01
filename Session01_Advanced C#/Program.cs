@@ -5,33 +5,65 @@
         static void Main()
         {
             #region Generics
-            int A = 8, B = 10;
-            Console.WriteLine(A);
-            Console.WriteLine(B);
-            Console.WriteLine("After Swap: ");
-            Helper<int>.Swap(ref A, ref B);
-            Console.WriteLine(A);
-            Console.WriteLine(B);
-            Console.WriteLine("***********************");
-            double x = 10.5, y = 20.5;
-            //double x = 10.5, y = 20;
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine("After Swap: ");
-            Helper<double>.Swap(ref x, ref y);
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine("***********************");
-            Point p1 = new Point(10, 20);
-            Point p2 = new Point(30, 40);
-            Console.WriteLine(p1);
-            Console.WriteLine(p2);
-            Console.WriteLine("After Swap: ");
-            Helper<Point>.Swap(ref p1, ref p2);
-            Console.WriteLine(p1);
-            Console.WriteLine(p2);
+            //int A = 8, B = 10;
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
+            //Console.WriteLine("After Swap: ");
+            //Helper<int>.Swap(ref A, ref B);
+            //Console.WriteLine(A);
+            //Console.WriteLine(B);
+            //Console.WriteLine("***********************");
+            //double x = 10.5, y = 20.5;
+            ////double x = 10.5, y = 20;
+            //Console.WriteLine(x);
+            //Console.WriteLine(y);
+            //Console.WriteLine("After Swap: ");
+            //Helper<double>.Swap(ref x, ref y);
+            //Console.WriteLine(x);
+            //Console.WriteLine(y);
+            //Console.WriteLine("***********************");
+            //Point p1 = new Point(10, 20);
+            //Point p2 = new Point(30, 40);
+            //Console.WriteLine(p1);
+            //Console.WriteLine(p2);
+            //Console.WriteLine("After Swap: ");
+            //Helper<Point>.Swap(ref p1, ref p2);
+            //Console.WriteLine(p1);
+            //Console.WriteLine(p2);
             #endregion
 
+            #region Generics SearchArray
+            //int[] Numbers = { 1, 2, 3, 4, 5, 6, 7 };
+            //int Index = Helper.SearchArray(Numbers, 5);
+            //Console.WriteLine(Index);
+            //Point[] points = new Point[]
+            //{
+            //    new Point(10,20),
+            //    new Point(30,40),
+            //    new Point(50,60),
+            //    new Point(70,80),
+            //    new Point(90,100),
+            //};
+            //Point point3 = new Point(50, 60);
+            //Index = Helper.SearchArray(points, point3);
+            //Console.WriteLine(Index);
+            //Employee[] employees = new Employee[]
+            //{
+            //    new Employee{ID = 1, Name = "Omar", Salary = 1000},
+            //    new Employee{ID = 2, Name = "Mai", Salary = 2000},
+            //    new Employee{ID = 3, Name = "Ali", Salary = 3000},
+            //    new Employee{ID = 4, Name = "Hana", Salary = 4000},
+            //};
+            //Employee employee3 = new Employee { ID = 5, Name = "Hoda", Salary = 5000 };
+            //Index = Helper.SearchArray(employees, employee3);
+            //Console.WriteLine(Index);
+            Employee employee = new Employee() { ID = 1, Name = "Omar", Salary = 1000 };
+            Employee employee2 = new Employee() { ID = 1, Name = "Omar", Salary = 1000 };
+            if (employee.Equals(employee2))
+                Console.WriteLine("Equal");
+            else
+                Console.WriteLine("Not Equal");
+            #endregion
         }
     }
 }
