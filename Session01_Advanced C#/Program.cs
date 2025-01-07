@@ -57,12 +57,23 @@
             //Employee employee3 = new Employee { ID = 5, Name = "Hoda", Salary = 5000 };
             //Index = Helper.SearchArray(employees, employee3);
             //Console.WriteLine(Index);
-            Employee employee = new Employee() { ID = 1, Name = "Omar", Salary = 1000 };
-            Employee employee2 = new Employee() { ID = 1, Name = "Omar", Salary = 1000 };
-            if (employee.Equals(employee2))
-                Console.WriteLine("Equal");
+            //Employee employee = new Employee() { ID = 1, Name = "Omar", Salary = 1000 };
+            //Employee employee2 = new Employee() { ID = 1, Name = "Omar", Salary = 1000 };
+            //if (employee.Equals(employee2))
+            //    Console.WriteLine("Equal");
+            //else
+            //    Console.WriteLine("Not Equal");
+            #endregion
+
+            #region Equality in Struct&Class
+            Employee emp1 = new Employee { ID = 1000, Name = "Ahmed", Salary = 1 };
+            Employee emp2 = new Employee { ID = 1, Name = "Ahmed", Salary = 1000 };
+            Console.WriteLine(emp1.GetHashCode());
+            Console.WriteLine(emp2.GetHashCode());
+            if (emp1.Equals(emp2))
+                Console.WriteLine("Equals");
             else
-                Console.WriteLine("Not Equal");
+                Console.WriteLine("Not Equals");
             #endregion
         }
     }
