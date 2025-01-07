@@ -66,14 +66,45 @@
             #endregion
 
             #region Equality in Struct&Class
-            Employee emp1 = new Employee { ID = 1000, Name = "Ahmed", Salary = 1 };
-            Employee emp2 = new Employee { ID = 1, Name = "Ahmed", Salary = 1000 };
-            Console.WriteLine(emp1.GetHashCode());
-            Console.WriteLine(emp2.GetHashCode());
-            if (emp1.Equals(emp2))
-                Console.WriteLine("Equals");
-            else
-                Console.WriteLine("Not Equals");
+            //Employee emp1 = new Employee { ID = 1000, Name = "Ahmed", Salary = 1 };
+            //Employee emp2 = new Employee { ID = 1, Name = "Ahmed", Salary = 1000 };
+            //Console.WriteLine(emp1.GetHashCode());
+            //Console.WriteLine(emp2.GetHashCode());
+            //if (emp1.Equals(emp2))
+            //    Console.WriteLine("Equals");
+            //else
+            //    Console.WriteLine("Not Equals");
+            #endregion
+
+            #region Generics_BubbleSort
+            //int[] Numbers = { 5, 4, 3, 2, 1 };
+            //Helper.BubbleSort(Numbers);
+            //foreach (int number in Numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+            //Point[] points = new Point[]
+            //{
+            //    new Point(20,30),
+            //    new Point(10,20),
+            //    new Point(1,2),
+            //    new Point(2,3)
+            //};
+            //Helper<Point>.BubbleSort(points);
+            //foreach (Point point in points)
+            //{
+            //    Console.WriteLine(point);
+            //}
+
+            Employee employee = new Employee() { ID = 1, Name = "Mostafa", Salary = 10000 };
+            Employee employee2 = new Employee() { ID = 2, Name = "Mohamed", Salary = 2000 };
+            Employee employee3 = new Employee() { ID = 3, Name = "Ahmed", Salary = 1000 };
+            Employee[] employees = new Employee[] { employee, employee2, employee3 };
+            Helper<Employee>.BubbleSort(employees);
+            foreach (Employee emp in employees)
+            {
+                Console.WriteLine(emp);
+            }
             #endregion
         }
     }

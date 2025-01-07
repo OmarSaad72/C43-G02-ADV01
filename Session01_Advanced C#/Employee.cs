@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session01_Advanced_C_
 {
-    internal struct Employee
+    internal struct Employee : IComparable
     {
         public int ID { get; set; }
         public string? Name { get; set; }
@@ -35,6 +35,17 @@ namespace Session01_Advanced_C_
         {
             return !left.Equals(right);
             //return (left.ID != right.ID) || (left.Name != right.Name) || (left.Salary != left.Salary);
+        }
+        public int CompareTo(object? obj)
+        {
+            //Employee? employee = (Employee?)obj;
+            //if (obj is Employee employee)
+            //{
+            //    return this.Salary.CompareTo(employee?.Salary);
+            //}
+            //return 1;
+            Employee? employee = obj as Employee;
+            return this.Salary.CompareTo(employee?.Salary);
         }
     }
 }
